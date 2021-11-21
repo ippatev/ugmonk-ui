@@ -4,6 +4,7 @@
 
 import BaseHeader from './components/BaseHeader.vue'
 import CategoryTabs from './components/CategoryTabs.vue'
+import OrderCard from './components/OrderCard.vue'
 </script>
 
 <template>
@@ -16,16 +17,27 @@ import CategoryTabs from './components/CategoryTabs.vue'
           <span>Analog: The Simplest Productivity System</span>
         </header>
         <div>
-          <button class="bg-transparent border-0 border-b-2 border-white text-white mt-4">Shop now</button>
+          <button class="bg-transparent cursor-pointer border-0 border-b-2 border-white text-white mt-4">Shop now</button>
         </div>
       </div>
     </section>
-    <section class="mt-12">
+    <section class="flex flex-col items-center mt-12">
       <category-tabs>
         <template #tab-content>
-          hello
+          <div class="flex flex-wrap gap-4 justify-center items-start">
+            <order-card
+                v-for="order of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]"
+                :key="order"
+                title="Discbound Heirloom Journal Bundle"
+                desc="(Natural Journal + 3 Refills)"
+                price="$162.00"
+            ></order-card>
+          </div>
         </template>
       </category-tabs>
+      <button class="bg-black cursor-pointer my-20 text-white py-4 px-8 border-none text-lg">
+        Shop New Arrivals →
+      </button>
     </section>
   </main>
 </template>

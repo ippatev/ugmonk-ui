@@ -15,7 +15,7 @@ const items = ref([
       <h1>Ugmonk UI</h1>
       <img src="../assets/logo.svg" alt="">
     </div>
-    <ul class="flex gap-6 list-none m-0 p-0">
+    <ul class="flex gap-6 list-none m-0 p-0 cursor-pointer">
       <li v-for="(item, idx) of items" v-text="item" :key="idx">
       </li>
     </ul>
